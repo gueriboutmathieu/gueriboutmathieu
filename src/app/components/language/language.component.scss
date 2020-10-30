@@ -1,0 +1,35 @@
+.language {
+	height: 3.5vw;
+	width: 3.5vw;
+	z-index: 1;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	border-radius: 10px 0 0 0;
+	border: none;
+}
+
+.languageButton {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px 0 0 0;
+	outline: none !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	background-color: transparent;
+	color: white;
+	font-family: azonix;
+	font-size: 20px;
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.5);
+		color: black;
+	}
+}
+
+.languageFlag {
+	height: 40%;
+	width: 70%;
+	vertical-align: middle;
+}

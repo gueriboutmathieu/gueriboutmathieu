@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { GalaxyComponent } from './components/galaxy/galaxy.component';
 import { LanguageComponent } from './components/language/language.component';
+import { LanguageService } from './services/language.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { LanguageComponent } from './components/language/language.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LanguageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

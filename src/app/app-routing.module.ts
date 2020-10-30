@@ -13,39 +13,39 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/home",
+    redirectTo: "home",
     pathMatch: "full"
   },
   {
-    path: "/home",
+    path: "home",
     component: HomeComponent
   },
   {
-    path: "/bio",
+    path: "bio",
     component: BioComponent
   },
   {
-    path: "/skills",
+    path: "skills",
     component: SkillsComponent
   },
   {
-    path: "/work-experience",
+    path: "work-experience",
     component: WorkExperienceComponent
   }, 
   {
-    path: "/education",
+    path: "education",
     component: EducationComponent
   },
   {
-    path: "/achievements",
+    path: "achievements",
     component: AchievementsComponent
   },
   {
-    path: "/hobbies",
+    path: "hobbies",
     component: HobbiesComponent
   },
   {
-    path: "/contact",
+    path: "contact",
     component: ContactComponent
   },
 ];
