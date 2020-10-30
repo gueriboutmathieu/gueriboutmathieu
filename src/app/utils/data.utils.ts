@@ -1,4 +1,4 @@
-export class Utils {
+export default class DataUtils {
 
 	// Navbar utils
 	static navbarViewsFR: Array<Array<string>> = [['0', 'home', 'Meridolian'], ['1', 'bio', 'Qui suis-je ?'], ['2', 'skills', 'Compétences'],

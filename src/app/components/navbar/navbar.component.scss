@@ -1,0 +1,56 @@
+.navbar {
+    height: 6.5%;
+    position: fixed;
+    top: 1.75%;
+    left: 1%;
+    right: 1%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+  
+    display: flex;
+    flex-direction: row;
+  }
+  .transparentNavbar {
+    opacity: 0.15;
+    color: white;
+  }
+  .whiteNavbar {
+    opacity: 0.75;
+    color: black;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    color: white;
+    font-family: azonix;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: black;
+    }
+  }
+  
+  .homeButton {
+    flex-grow: 5;
+    height: 100%;
+    font-size: 35px;
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .viewButton {
+    flex-grow: 1;
+    width: 10%;
+    height: 100%;
+    font-size: 20px;
+  }
+  .lastViewButton {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .activeViewButton {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+  }
