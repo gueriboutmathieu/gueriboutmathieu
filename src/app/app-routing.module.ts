@@ -18,35 +18,43 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component: HomeComponent
+    component: HomeComponent,
+    data: { routeIdx: 0 }
   },
   {
     path: "bio",
-    component: BioComponent
+    component: BioComponent,
+    data: { routeIdx: 1 }
   },
   {
     path: "skills",
-    component: SkillsComponent
+    component: SkillsComponent,
+    data: { routeIdx: 2 }
   },
   {
     path: "work-experience",
-    component: WorkExperienceComponent
+    component: WorkExperienceComponent,
+    data: { routeIdx: 3 }
   }, 
   {
     path: "education",
-    component: EducationComponent
+    component: EducationComponent,
+    data: { routeIdx: 4 }
   },
   {
     path: "achievements",
-    component: AchievementsComponent
+    component: AchievementsComponent,
+    data: { routeIdx: 5 }
   },
   {
     path: "hobbies",
-    component: HobbiesComponent
+    component: HobbiesComponent,
+    data: { routeIdx: 6 }
   },
   {
     path: "contact",
-    component: ContactComponent
+    component: ContactComponent,
+    data: { routeIdx: 7 }
   },
 ];
 

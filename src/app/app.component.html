@@ -1,5 +1,7 @@
 <div class="app">
 	<app-navbar></app-navbar>
-	<router-outlet></router-outlet>
+	<div [@animRoutes]="animationState">
+		<router-outlet (activate)="onActivate($event)"></router-outlet>
+	</div>
 	<app-language></app-language>
 </div>

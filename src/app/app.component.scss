@@ -8,6 +8,11 @@
     background-size: cover;
 }
 
+@font-face {
+    font-family: azonix;
+    src: url("../assets/fonts/azonix.otf");
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
