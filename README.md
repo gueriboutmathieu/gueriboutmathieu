@@ -4,4 +4,4 @@
 
 ### I'm Meridolian, a web 🕸️, mobile 📱, and AI 🧠 developer apprentice !
 
-### Welcome to my hazardous journey 🚀🌠
+### Welcome to my journey to the unknown 🚀🌠
