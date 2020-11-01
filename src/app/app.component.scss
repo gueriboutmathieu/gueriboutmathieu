@@ -2,10 +2,6 @@
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    background: url("../assets/images/galaxy.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 @font-face {
@@ -16,6 +12,7 @@
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
+    z-index: 1;
 }
 ::-webkit-scrollbar-track {
     background: transparent;
