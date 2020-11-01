@@ -1,5 +1,13 @@
 export default class DataUtils {
 
+	// Home Utils
+	static welcomeFR: Array<string> = ["Bonjour !", "Je suis Meridolian, un apprenti développeur en web 🕸️, mobile 📱, et Intelligence Artificielle 🧠 !",
+	"Bienvenue dans mon voyage dans l'inconnu 🚀🌠"];
+
+	static welcomeEN: Array<string> = ["Hi there !", "I'm Meridolian, a web 🕸️, mobile 📱, and AI 🧠 developer apprentice !",
+	"Welcome to my journey to the unknown 🚀🌠"];
+
+
 	// Navbar utils
 	static navbarViewsFR: Array<Array<string>> = [['0', 'home', 'Meridolian'], ['1', 'bio', 'Qui suis-je ?'], ['2', 'skills', 'Compétences'],
 	['3', 'work-experience', 'Expériences'], ['4', 'education', 'Formations'], ['5', 'achievements', 'Projets Personnels'], ['6', 'hobbies', 'Hobbies'],

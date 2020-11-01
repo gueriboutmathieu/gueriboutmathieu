@@ -6,25 +6,25 @@ import { Subject } from 'rxjs';
 })
 export class LanguageService {
     
-    currentLanguage: string;
-    currentLanguageSubject: Subject<string>;
+    language: string;
+    languageSubject: Subject<string>;
 
     constructor() {
-        this.currentLanguage = "FR";
-        this.currentLanguageSubject = new Subject<string>();
+        this.language = "FR";
+        this.languageSubject = new Subject<string>();
         this.emitLanguage();
     }
 
     emitLanguage() {
-        this.currentLanguageSubject.next(this.currentLanguage);
+        this.languageSubject.next(this.language);
     }
 
     changeLanguage() {
-        if(this.currentLanguage === "FR") {
-            this.currentLanguage = "EN";
+        if(this.language === "FR") {
+            this.language = "EN";
         }
-        else if(this.currentLanguage === "EN") {
-            this.currentLanguage = "FR";
+        else if(this.language === "EN") {
+            this.language = "FR";
         }
         this.emitLanguage();
     }

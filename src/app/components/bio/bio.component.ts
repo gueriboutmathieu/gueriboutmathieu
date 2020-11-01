@@ -16,7 +16,7 @@ export class BioComponent implements OnInit {
 	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		this.languageSubscription = this.languageService.currentLanguageSubject.subscribe(
+		this.languageSubscription = this.languageService.languageSubject.subscribe(
 			(lang) => {
 				if(lang === "FR") {
 					this.bioArray = DataUtils.bioFR;

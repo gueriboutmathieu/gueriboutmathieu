@@ -15,7 +15,7 @@ export class LanguageComponent implements OnInit {
 	constructor(private languageService: LanguageService) { }
 
 	ngOnInit(): void {
-		this.languageSubscription = this.languageService.currentLanguageSubject.subscribe(
+		this.languageSubscription = this.languageService.languageSubject.subscribe(
 			(lang) => {
 				this.currentFlag = lang;
 			}

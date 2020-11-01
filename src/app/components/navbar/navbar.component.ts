@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
 	ngOnInit(): void {
 		this.currentRoute = "";
 
-		this.languageSubscription = this.languageService.currentLanguageSubject.subscribe(
+		this.languageSubscription = this.languageService.languageSubject.subscribe(
 			(lang) => {
 				if(lang === "FR"){
 					this.routes = DataUtils.navbarViewsFR;
