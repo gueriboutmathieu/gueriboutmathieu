@@ -1,0 +1,37 @@
+.skills {
+	margin-top: 7.5%;
+}
+
+.skillsField {
+	border-radius: 10px;
+	margin: 2.5% 5% 5% 5%;
+	padding: 2.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.lightSkillsField {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.darkSkillsField {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fieldLabel {
+    text-align: center;
+    background-color: blue;
+}
+
+.skill {
+    height: 10%;
+    width: 10%;
+    margin: 3.5%;
+    text-align: center;
+}
+
+.skillImage {
+    height: 100%;
+    width: 100%;
+}

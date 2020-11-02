@@ -108,7 +108,11 @@ export default class DataUtils {
 
 
 	// Skills utils
-	static webSkills: Array<Array<string>> = [['Angular', 'angular.png'], ['AngularJS', 'angularjs.png'], ['Javascript', 'javascript.png'],
+	static fieldLabelsFR: Array<string> = ['Web', 'Mobile', 'Outils', 'Compétences Générales', 'Compétences futures'];
+
+	static fieldLabelsEN: Array<string> = ['Web', 'Mobile', 'Tools', 'Soft Skills', 'Future Skills'];
+
+	static webSkills: Array<Array<string>> = [['Angular', 'angular.png'], ['AngularJS', 'angularjs.png'], ['VueJS', 'vuejs.png'], ['Javascript', 'javascript.png'],
 	['Typescript', 'typescript.png'], ['Sass', 'sass.png'], ['HTML 5', 'html.png'], ['CSS 3', 'css.png'], ['Java', 'java.png'],
 	['Spring', 'spring.png']];
 
