@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
+import { NightModeService } from 'src/app/services/night-mode.service';
 import DataUtils from 'src/app/utils/data.utils';
 
 @Component({
@@ -13,7 +14,10 @@ export class BioComponent implements OnInit {
 	bioArray: Array<string>;
 	languageSubscription: Subscription;
 
-	constructor(private languageService: LanguageService) { }
+	nightMode: boolean;
+	nightModeSubscription: Subscription;
+
+	constructor(private languageService: LanguageService, private nightModeService: NightModeService) { }
 
 	ngOnInit(): void {
 		this.languageSubscription = this.languageService.languageSubject.subscribe(
@@ -27,6 +31,13 @@ export class BioComponent implements OnInit {
 			}
 		);
 		this.languageService.emitLanguage();
+
+		this.nightModeSubscription = this.nightModeService.nightModeSubject.subscribe(
+			(nightMode: boolean) => {
+				this.nightMode = nightMode;
+			}
+		);
+		this.nightModeService.emitNightMode();
 	}
 
 }

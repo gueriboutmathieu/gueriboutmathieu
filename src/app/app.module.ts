@@ -18,6 +18,7 @@ import { LanguageComponent } from './components/language/language.component';
 import { LanguageService } from './services/language.service';
 import { NightModeService } from './services/night-mode.service';
 import { NightModeComponent } from './components/night-mode/night-mode.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NightModeComponent } from './components/night-mode/night-mode.component
     NavbarComponent,
     GalaxyComponent,
     LanguageComponent,
-    NightModeComponent
+    NightModeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
