@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
+import { NightModeService } from 'src/app/services/night-mode.service';
 import DataUtils from "../../utils/data.utils";
 
 @Component({
@@ -15,7 +16,10 @@ export class NavbarComponent implements OnInit {
 	currentRoute: string;
 	languageSubscription: Subscription;
 
-	constructor(private router: Router, private languageService: LanguageService) { }
+	nightMode: boolean;
+	nightModeSubscription: Subscription;
+
+	constructor(private router: Router, private languageService: LanguageService, private nightModeService: NightModeService) { }
 
 	ngOnInit(): void {
 		this.currentRoute = "";
@@ -31,6 +35,13 @@ export class NavbarComponent implements OnInit {
 			}
 		);
 		this.languageService.emitLanguage();
+
+		this.nightModeSubscription = this.nightModeService.nightModeSubject.subscribe(
+			(nightMode: boolean) => {
+				this.nightMode = nightMode;
+			}
+		);
+		this.nightModeService.emitNightMode();
 	}
 
 	goToRoute(route: string) {

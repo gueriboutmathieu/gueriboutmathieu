@@ -1,7 +1,12 @@
-<div class="navbar">
+<div class="navbar" [ngClass]="{lightNavbar: nightMode, darkNavbar: !nightMode}">
 	<button *ngFor="let route of routes" (click)="goToRoute(route[1])" 
-	[ngClass]="{activeViewButton: currentRoute === route[1],
-		viewButton: route[0] !== '0',
+	[ngClass]="{darkNavbarTextColor: !nightMode,
+		lightNavbarTextColor: nightMode,
+		routeButton: route[0] !== '0',
         homeButton:  route[0] === '0',
-        lastViewButton: route[0] === '7'}">{{ route[2] }}</button>
+		lastRouteButton: route[0] === '7',
+		lightRouteButton: nightMode,
+		darkRouteButton: !nightMode,
+		lightActiveRouteButton: nightMode && currentRoute === route[1],
+		darkActiveRouteButton: !nightMode && currentRoute === route[1]}">{{ route[2] }}</button>
 </div>

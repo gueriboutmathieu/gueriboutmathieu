@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
+import { NightModeService } from 'src/app/services/night-mode.service';
 
 @Component({
 	selector: 'app-language',
@@ -12,7 +13,10 @@ export class LanguageComponent implements OnInit {
 	currentFlag: string;
 	languageSubscription: Subscription;
 
-	constructor(private languageService: LanguageService) { }
+	nightMode: boolean;
+	nightModeSubscription: Subscription;
+
+	constructor(private languageService: LanguageService, private nightModeService: NightModeService) { }
 
 	ngOnInit(): void {
 		this.languageSubscription = this.languageService.languageSubject.subscribe(
@@ -21,6 +25,13 @@ export class LanguageComponent implements OnInit {
 			}
 		);
 		this.languageService.emitLanguage();
+
+		this.nightModeSubscription = this.nightModeService.nightModeSubject.subscribe(
+			(nightMode: boolean) => {
+				this.nightMode = nightMode;
+			}
+		);
+		this.nightModeService.emitNightMode();
 	}
 
 	onChangeLanguage() {

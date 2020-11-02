@@ -1,55 +1,78 @@
 .navbar {
-    height: 6.5%;
-    position: fixed;
-    top: 1.75%;
-    left: 1%;
-    right: 1%;
-    z-index: 1;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
-  
-    display: flex;
-    flex-direction: row;
-  }
-  .transparentNavbar {
-    opacity: 0.15;
-    color: white;
-  }
-  .whiteNavbar {
-    opacity: 0.75;
-    color: black;
-  }
-  
-  button {
-    background-color: transparent;
-    border: none;
-    outline: none !important;
-    box-shadow: none !important;
-    cursor: pointer;
-    font-family: azonix;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.25);
-      color: black;
-    }
-  }
-  
-  .homeButton {
-    flex-grow: 5;
-    height: 100%;
-    font-size: 35px;
-    border-radius: 10px 0px 0px 10px;
-  }
-  
-  .viewButton {
-    flex-grow: 1;
-    width: 10%;
-    height: 100%;
-    font-size: 20px;
-  }
-  .lastViewButton {
-    border-radius: 0px 10px 10px 0px;
-  }
-  .activeViewButton {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: black;
-  }
+	height: 6.5%;
+	position: fixed;
+	top: 1.75%;
+	left: 1%;
+	right: 1%;
+	z-index: 1;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+}
+
+.darkNavbar {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.lightNavbar {
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	outline: none !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	font-family: azonix;
+}
+
+.lightNavbarTextColor {
+	color: white;
+}
+
+.darkNavbarTextColor {
+	color: black;
+}
+
+.routeButton {
+	flex-grow: 1;
+	width: 10%;
+	height: 100%;
+	font-size: 20px;
+}
+
+.homeButton {
+	flex-grow: 5;
+	height: 100%;
+	font-size: 35px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.lastRouteButton {
+	border-radius: 0px 10px 10px 0px;
+}
+
+.darkRouteButton {
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.25);
+		color: white;
+	}
+}
+
+.lightRouteButton {
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.25);
+		color: black;
+	}
+}
+
+.darkActiveRouteButton {
+	background-color: rgba(0, 0, 0, 0.25);
+	color: white;
+}
+
+.lightActiveRouteButton {
+	background-color: rgba(255, 255, 255, 0.25);
+	color: black;
+}
