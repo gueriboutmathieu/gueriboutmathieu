@@ -1,8 +1,9 @@
-<div class="app">
+<div class="app" [ngClass]="{textWhite: nightMode, textBlack: !nightMode}">
 	<app-galaxy></app-galaxy>
 	<app-navbar></app-navbar>
 	<div [@animRoutes]="animationState">
 		<router-outlet (activate)="onActivate($event)"></router-outlet>
 	</div>
 	<app-language></app-language>
+	<app-night-mode></app-night-mode>
 </div>

@@ -16,6 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { GalaxyComponent } from './components/galaxy/galaxy.component';
 import { LanguageComponent } from './components/language/language.component';
 import { LanguageService } from './services/language.service';
+import { NightModeService } from './services/night-mode.service';
+import { NightModeComponent } from './components/night-mode/night-mode.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { LanguageService } from './services/language.service';
     ContactComponent,
     NavbarComponent,
     GalaxyComponent,
-    LanguageComponent
+    LanguageComponent,
+    NightModeComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { LanguageService } from './services/language.service';
     AppRoutingModule
   ],
   providers: [
-    LanguageService
+    LanguageService,
+    NightModeService
   ],
   bootstrap: [AppComponent]
 })

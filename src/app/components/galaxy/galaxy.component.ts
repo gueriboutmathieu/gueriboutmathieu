@@ -30,8 +30,6 @@ export class GalaxyComponent implements AfterViewInit {
 				Math.random() * 600 - 300,
 				Math.random() * 600 - 300
 			);
-			star.velocity = 0;
-			star.acceleration = 0.02;
 			this.starGeo.vertices.push(star);
 		}
 
@@ -48,25 +46,23 @@ export class GalaxyComponent implements AfterViewInit {
 
 	ngAfterViewInit(): void {
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
+		this.renderer.setClearColor(new three.Color(0x000000));
 		this.galaxy.nativeElement.appendChild(this.renderer.domElement);
 
 		this.animate();
 	}
 
-
 	animate() {
-		this.starGeo.vertices.forEach(p => {
-			p.velocity += p.acceleration
-			p.y -= p.velocity;
+		this.starGeo.vertices.forEach(star => {
+			star.y -= 1;
 
-			if (p.y < -200) {
-				p.y = 200;
-				p.velocity = 0;
+			if (star.y < -200) {
+				star.y = 200;
 			}
 		});
-		this.starGeo.verticesNeedUpdate = true;
-		this.stars.rotation.y +=0.002;
-
+		this.stars.rotation.y += 0.0025;
+		this.starGeo.verticesNeedUpdate = true; 
+ 	
 		window.requestAnimationFrame(() => this.animate());
 		this.renderer.render(this.scene, this.camera);
 	}
