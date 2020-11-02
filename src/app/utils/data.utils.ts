@@ -18,6 +18,12 @@ export default class DataUtils {
 	['7', 'contact', 'Contact']];
 
 
+	// Footer utils
+	static footerFR: string = "Fait avec ❤️ avec Angular + ThreeJS";
+
+	static footerEN: string = "Made with ❤️ with Angular + ThreeJS";
+
+
 	// Bio utils
 	static bioFR: Array<string> = [
 		"Je m'appelle Mathieu Gueribout, j'ai 22 ans, et je suis un grand passionné de High Tech depuis mon enfance. " +
