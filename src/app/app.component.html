@@ -1,4 +1,4 @@
-<div class="app" [ngClass]="{textWhite: nightMode, textBlack: !nightMode}">
+<div class="app" [ngClass]="{textWhite: nightMode, textBlack: !nightMode, lightScrollBar: nightMode, darkScrollBar: !nightMode}">
 	<app-galaxy></app-galaxy>
 	<app-navbar></app-navbar>
 	<div [@animRoutes]="animationState">
