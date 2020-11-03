@@ -3,36 +3,36 @@
 	width: 3.5vw;
 	z-index: 1;
 	position: fixed;
-	left: 0;
-	bottom: 0;
-	background-color: transparent;
-	border-radius: 10px 0 0 0;
+	left: 0.75%;
+	bottom: 1.5%;
+	border-radius: 0 0 10px 10px;
 	border: none;
+}
+
+.whiteBackground {
+	background-color: rgba(0, 0, 0, 0.25);
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+		color: black;
+	}
+}
+
+.blackBackground {
+	background-color: rgba(255, 255, 255, 0.25);
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.5);
+		color: black;
+	}
 }
 
 .nightModeButton {
 	height: 100%;
 	width: 100%;
 	border: none;
-	border-radius: 0 10px 0 0;
 	outline: none !important;
 	box-shadow: none !important;
 	cursor: pointer;
 	background-color: transparent;
-}
-
-.whiteBackground {
-	&:hover {
-		background-color: rgba(0, 0, 0, 0.25);
-		color: black;
-	}
-}
-
-.blackBackground {
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.25);
-		color: black;
-	}
 }
 
 .sun {

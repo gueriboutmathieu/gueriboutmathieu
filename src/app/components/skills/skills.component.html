@@ -1,12 +1,10 @@
 <div class="skillsContainer">
     <div class="skillsField" [ngClass]="{lightSkillsField: nightMode, darkSkillsField: !nightMode}"
         *ngFor="let skills of skillsFields; let index = index">
-        <div class="row">
-            <span class="fieldLabel col text-center">{{ fieldLabels[index] }}</span>
-        </div>
+        <span class="fieldLabel">{{ fieldLabels[index] }}</span>
 
-        <div class="skills row">
-            <div class="skill" *ngFor="let skill of skills">
+        <div class="skills">
+            <div class="skill" *ngFor="let skill of skills" [ngClass]="{tooltipLight: nightMode, tooltipDark: !nightMode}">
                 <img class="skillImage" [src]="'../../../assets/images/' + skill[1]">
             </div>
         </div>
