@@ -19,12 +19,7 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 		this.welcomeSubscription = this.languageService.languageSubject.subscribe(
 			(lang: string) => {
-				if(lang === "FR"){
-					this.welcome = DataUtils.welcomeFR;
-				}
-				else if(lang === "EN") {
-					this.welcome = DataUtils.welcomeEN;
-				}
+				this.welcome = DataUtils['welcome' + lang];
 			}
 		);
 		this.languageService.emitLanguage();

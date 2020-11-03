@@ -20,12 +20,7 @@ export class FooterComponent implements OnInit {
 
 		this.languageSubscription = this.languageService.languageSubject.subscribe(
 			(lang: string) => {
-				if(lang === "FR") {
-					this.footerText = DataUtils.footerFR;
-				}
-				else if(lang === "EN") {
-					this.footerText = DataUtils.footerEN;
-				}
+				this.footerText = DataUtils['footer' + lang];
 			}
 		);
 		this.languageService.emitLanguage();
