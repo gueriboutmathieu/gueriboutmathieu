@@ -1,7 +1,5 @@
-# meridolian.ai
-
 ### Hi there !
 
-### I'm Meridolian, a web 🕸️, mobile 📱, and AI 🧠 developer apprentice !
+### I'm Meridolian, a tech enthusiast, thrilled by code, devops, hacking and coffee !
 
-### Welcome to my journey to the unknown 🚀🌠
+### Enjoy my toolbox lab 🧰🧪🤓
